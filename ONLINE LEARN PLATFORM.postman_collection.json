@@ -1,0 +1,1402 @@
+{
+	"info": {
+		"_postman_id": "5a3dfc7f-1cc7-410d-b2fb-7f3dd98a195b",
+		"name": "ONLINE LEARN PLATFORM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "REGIST EMAIL (DONE)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name_users",
+											"value": "rikoarafi",
+											"type": "text"
+										},
+										{
+											"key": "pict_users",
+											"type": "file",
+											"src": "/F:/DEV/MOCKUP/PICTURE/4.Red Velvet Latte.png"
+										},
+										{
+											"key": "number_users",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "bio",
+											"value": "woke",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "jakarta",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "bocahlagi262@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "verify",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGIST OTP (DONE)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name_users",
+											"value": "novivi123",
+											"type": "text"
+										},
+										{
+											"key": "pict_users",
+											"type": "file",
+											"src": "/F:/DEV/MOCKUP/PICTURE/photo-1467003909585-2f8a72700288.jpg"
+										},
+										{
+											"key": "number_users",
+											"value": "088293565736",
+											"type": "text"
+										},
+										{
+											"key": "bio",
+											"value": "woke",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "jakarta",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "dangerious@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "verify",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/send_otp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"send_otp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "VERIFY (DONE)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "codeverify",
+											"value": "7417",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/verify/eyJhbGciOiJIUzI1NiJ9.NjI4ODI5MzU2NTczNg.bfFREqNPu-LJM-6WkdhF-gFsibrBMM13XEH8oQdPnkA",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"verify",
+										"eyJhbGciOiJIUzI1NiJ9.NjI4ODI5MzU2NTczNg.bfFREqNPu-LJM-6WkdhF-gFsibrBMM13XEH8oQdPnkA"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LOGIN (DONE)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user",
+											"value": "databaru@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "passwordbaru",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RESET EMAIL/NUMBER (DONE)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user",
+											"value": "bocahlagi262@gmail.com",
+											"description": "number",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "bocahlagi262@gmail.com",
+											"description": "email",
+											"type": "text",
+											"disabled": true
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/reset-acclogin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"reset-acclogin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RESET PASSWORD (DONE)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user",
+											"value": "databaru@gmail.com",
+											"description": "untuk gmail",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "088293565736",
+											"description": "untuk whatsapp",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/reset-password",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"reset-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CHECK CODE CHANGE VERIFY(DONE)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "codeverify",
+											"value": "6051",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/check_code/eyJhbGciOiJIUzI1NiJ9.ZGF0YWJhcnVAZ21haWwuY29t.0wWisliOlinqlZzdBGx-bWnWSDuiwD4s4AVcINOfiPY",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"check_code",
+										"eyJhbGciOiJIUzI1NiJ9.ZGF0YWJhcnVAZ21haWwuY29t.0wWisliOlinqlZzdBGx-bWnWSDuiwD4s4AVcINOfiPY"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CONFIRM RESET EMAIL/NUMBER",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiZGF0YWJhcnVAZ21haWwuY29tIiwiaWF0IjoxNjMyMDYxMDIzLCJleHAiOjE2MzIwNjQ2MjN9.eCtbMLsvV22jif6NTWBUIq_3Z1J_UcYdJMgHm3zCH58",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "contact.email",
+											"value": "databaru@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "contact.number_users",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/confirm-acclogin/eyJhbGciOiJIUzI1NiJ9.ZGF0YWJhcnVAZ21haWwuY29t.0wWisliOlinqlZzdBGx-bWnWSDuiwD4s4AVcINOfiPY",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"confirm-acclogin",
+										"eyJhbGciOiJIUzI1NiJ9.ZGF0YWJhcnVAZ21haWwuY29t.0wWisliOlinqlZzdBGx-bWnWSDuiwD4s4AVcINOfiPY"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CONFIRM-PASSWORD (DONE)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiZGF0YWJhcnVAZ21haWwuY29tIiwiaWF0IjoxNjMyMDYxMDIzLCJleHAiOjE2MzIwNjQ2MjN9.eCtbMLsvV22jif6NTWBUIq_3Z1J_UcYdJMgHm3zCH58",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "confirmPassword",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "password",
+											"value": "passwordbaru",
+											"type": "text"
+										},
+										{
+											"key": "confirmPassword",
+											"value": "passwordbaru",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/confirm-password/eyJhbGciOiJIUzI1NiJ9.ZGF0YWJhcnVAZ21haWwuY29t.0wWisliOlinqlZzdBGx-bWnWSDuiwD4s4AVcINOfiPY",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"confirm-password",
+										"eyJhbGciOiJIUzI1NiJ9.ZGF0YWJhcnVAZ21haWwuY29t.0wWisliOlinqlZzdBGx-bWnWSDuiwD4s4AVcINOfiPY"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LOGOUT USERS(DONE)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/logout/612d00207b01d5cb39479eae",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"logout",
+										"612d00207b01d5cb39479eae"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DETAILS USER (DONE)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhYUBnbWFpbC5jb20iLCJpYXQiOjE2MzA0Nzk4OTksImV4cCI6MTYzMDQ4MzQ5OX0.UXR5P6ebY44v8yy7JGw_WdZZiod-ALh1swVhhkMlvMs",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/getdetails/614744ab90b7c8df1a2a7816",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"getdetails",
+										"614744ab90b7c8df1a2a7816"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE (DONE) NO PASS EMAIL NUMBER",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "profile.name_users",
+											"value": "barurrrr",
+											"type": "text"
+										},
+										{
+											"key": "profile.bio",
+											"value": "sango bio n",
+											"type": "text"
+										},
+										{
+											"key": "contact.location",
+											"value": "Jakarta",
+											"type": "text"
+										},
+										{
+											"key": "pict_users",
+											"type": "file",
+											"src": "/F:/DEV/MOCKUP/PICTURE/photo-1460306855393-0410f61241c7.jpg"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/update/614744ab90b7c8df1a2a7816",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"update",
+										"614744ab90b7c8df1a2a7816"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REFRESH TOKEN (DONE)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvY2FobGFnaTI2MkBnbWFpbC5jb20iLCJpYXQiOjE2MzAzMzk4OTksImV4cCI6MTYzMDM0MzQ5OX0.pzillvBt5B7YDiSt2MzUOHVirxf-L3ZCMmHOmU0Iw7I",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "refreshToken",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNDc0NGFiOTBiN2M4ZGYxYTJhNzgxNiIsImlhdCI6MTYzMjA2MDY2Mn0.G2-b6ccg6-mqhBtgvg1FuIfanLXDjGlH9UQNpvxTV0A",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/users/refresh-token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"refresh-token"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "course",
+					"item": [
+						{
+							"name": "GETALL (DONE)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvY2FobGFnaTI2MkBnbWFpbC5jb20iLCJpYXQiOjE2Mjk1NDYwOTEsImV4cCI6MTYyOTU0OTY5MX0.R48gwuE7Z7FhEJx6aV2jqpv96mm5Z5-09t3DcoVP6pY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/courses/getall",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"getall"
+									],
+									"query": [
+										{
+											"key": "name_product",
+											"value": "c",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SEARCH NAME (DONE)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvY2FobGFnaTI2MkBnbWFpbC5jb20iLCJpYXQiOjE2Mjk1NDYwOTEsImV4cCI6MTYyOTU0OTY5MX0.R48gwuE7Z7FhEJx6aV2jqpv96mm5Z5-09t3DcoVP6pY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/courses/getall?name_course=123",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"getall"
+									],
+									"query": [
+										{
+											"key": "name_course",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PAGINATION (DONE)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvY2FobGFnaTI2MkBnbWFpbC5jb20iLCJpYXQiOjE2Mjk1NDYwOTEsImV4cCI6MTYyOTU0OTY5MX0.R48gwuE7Z7FhEJx6aV2jqpv96mm5Z5-09t3DcoVP6pY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/courses/getall?limit=5&page=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"getall"
+									],
+									"query": [
+										{
+											"key": "name_product",
+											"value": "c",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "page",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SORT BY (DONE)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvY2FobGFnaTI2MkBnbWFpbC5jb20iLCJpYXQiOjE2Mjk1NDYwOTEsImV4cCI6MTYyOTU0OTY5MX0.R48gwuE7Z7FhEJx6aV2jqpv96mm5Z5-09t3DcoVP6pY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/courses/getall?category=ilmu kebal&name_course=4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"getall"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "ilmu kebal",
+											"description": "kalo name_course gada di getall"
+										},
+										{
+											"key": "typesort",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "name_course",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SORT ASC DESC (DONE)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvY2FobGFnaTI2MkBnbWFpbC5jb20iLCJpYXQiOjE2Mjk1NDYwOTEsImV4cCI6MTYyOTU0OTY5MX0.R48gwuE7Z7FhEJx6aV2jqpv96mm5Z5-09t3DcoVP6pY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/courses/getall?sort=price&typesort=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"getall"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "price"
+										},
+										{
+											"key": "typesort",
+											"value": "1"
+										},
+										{
+											"key": "name_product",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "Foods",
+											"disabled": true
+										},
+										{
+											"key": "gte",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "lte",
+											"value": "3000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SORT RANGE PRICE (DONE)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvY2FobGFnaTI2MkBnbWFpbC5jb20iLCJpYXQiOjE2Mjk1NDYwOTEsImV4cCI6MTYyOTU0OTY5MX0.R48gwuE7Z7FhEJx6aV2jqpv96mm5Z5-09t3DcoVP6pY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/courses/getall?gte=0&lte=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"getall"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "price",
+											"disabled": true
+										},
+										{
+											"key": "typesort",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "name_product",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "Foods",
+											"disabled": true
+										},
+										{
+											"key": "gte",
+											"value": "0"
+										},
+										{
+											"key": "lte",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ALL,ALL (DONE)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvY2FobGFnaTI2MkBnbWFpbC5jb20iLCJpYXQiOjE2Mjk1NDYwOTEsImV4cCI6MTYyOTU0OTY5MX0.R48gwuE7Z7FhEJx6aV2jqpv96mm5Z5-09t3DcoVP6pY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/courses/getall?gte=0&lte=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"getall"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "price",
+											"description": "include typesort",
+											"disabled": true
+										},
+										{
+											"key": "typesort",
+											"value": "-1",
+											"description": "include sort,1 asc,-1 desc",
+											"disabled": true
+										},
+										{
+											"key": "name_course",
+											"value": "1",
+											"description": "sesuai value hasilnya,tidak berurutan",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "ilmu kebal",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "5",
+											"description": "include page",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "include limit",
+											"disabled": true
+										},
+										{
+											"key": "gte",
+											"value": "0",
+											"description": "include gte,default 0"
+										},
+										{
+											"key": "lte",
+											"value": "0",
+											"description": "include lte,default 1jt"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DETAILS PRODUCT (DONE)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvY2FobGFnaTI2MkBnbWFpbC5jb20iLCJpYXQiOjE2Mjk1NDYwOTEsImV4cCI6MTYyOTU0OTY5MX0.R48gwuE7Z7FhEJx6aV2jqpv96mm5Z5-09t3DcoVP6pY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/product/getdetails/61377774dd1963391a106e81",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										"getdetails",
+										"61377774dd1963391a106e81"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "GET ALL (DONE)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhdGFiYXJ1QGdtYWlsLmNvbSIsImlhdCI6MTYzMjA2MjI1NiwiZXhwIjoxNjMyMDY1ODU2fQ.YehB5d-mo7udU9H_a9i1e1gonpFmPybcste9Ri2_mjQ",
+										"type": "text"
+									},
+									{
+										"key": "admin",
+										"value": "1",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/admin/users/getall",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"users",
+										"getall"
+									],
+									"query": [
+										{
+											"key": "name_users",
+											"value": "z",
+											"disabled": true
+										},
+										{
+											"key": "fieldSort",
+											"value": "profile",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "name_users",
+											"disabled": true
+										},
+										{
+											"key": "ascdesc",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "9",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE USERS (DONE)",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhdGFiYXJ1QGdtYWlsLmNvbSIsImlhdCI6MTYzMjA2MjI1NiwiZXhwIjoxNjMyMDY1ODU2fQ.YehB5d-mo7udU9H_a9i1e1gonpFmPybcste9Ri2_mjQ",
+										"type": "text"
+									},
+									{
+										"key": "admin",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/admin/users/delete/61475472f991df85e750af15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"users",
+										"delete",
+										"61475472f991df85e750af15"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get qrcode (WAIT FE)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "BUKA DI BROWSER",
+											"value": "BUKA DI BROWSER",
+											"description": "BUKA DI BROWSER",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/admin/users/getqr",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"users",
+										"getqr"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "COUNT BY ID(DONE)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhdGFiYXJ1QGdtYWlsLmNvbSIsImlhdCI6MTYzMjA2MjI1NiwiZXhwIjoxNjMyMDY1ODU2fQ.YehB5d-mo7udU9H_a9i1e1gonpFmPybcste9Ri2_mjQ",
+										"type": "text"
+									},
+									{
+										"key": "admin",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/admin/users/find-count",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"users",
+										"find-count"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "course",
+					"item": [
+						{
+							"name": "COURSE INSERT (DONE)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name_course",
+											"value": "sip dah",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "ilmu kebal",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "description_course",
+											"value": "auto hokage",
+											"type": "text"
+										},
+										{
+											"key": "pict_course",
+											"type": "file",
+											"src": "/F:/DEV/MOCKUP/PICTURE/6.Black Forest.png"
+										},
+										{
+											"key": "inserted_by",
+											"value": "riko",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:2021/api/v1/admin/course/insert",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"course",
+										"insert"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "COUNT ALL COURSE(DONE)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/admin/course/find-count-course?category=ilmu kebal",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"course",
+										"find-count-course"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "ilmu kebal",
+											"description": "count by category"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PRICE FREE (DONE)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvY2FobGFnaTI2MkBnbWFpbC5jb20iLCJpYXQiOjE2Mjk1NDYwOTEsImV4cCI6MTYyOTU0OTY5MX0.R48gwuE7Z7FhEJx6aV2jqpv96mm5Z5-09t3DcoVP6pY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2021/api/v1/courses/getall?gte=0&lte=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2021",
+									"path": [
+										"api",
+										"v1",
+										"courses",
+										"getall"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "price",
+											"description": "include typesort",
+											"disabled": true
+										},
+										{
+											"key": "typesort",
+											"value": "-1",
+											"description": "include sort,1 asc,-1 desc",
+											"disabled": true
+										},
+										{
+											"key": "name_course",
+											"value": "1",
+											"description": "sesuai value hasilnya,tidak berurutan",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "ilmu kebal",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "5",
+											"description": "include page",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "include limit",
+											"disabled": true
+										},
+										{
+											"key": "gte",
+											"value": "0",
+											"description": "include gte,default 0"
+										},
+										{
+											"key": "lte",
+											"value": "0",
+											"description": "include lte,default 1jt"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
